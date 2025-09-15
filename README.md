@@ -5,14 +5,14 @@ This project demonstrates the implementation of a scalable and highly available 
 
  Architecture Diagram
 
-                                                              Internet Gateway
-                                                                     ↓
-                                                           Application Load Balancer
-                                                                     ↓
-                                                              Auto Scaling Group
-                                                                    ├── EC2 Instance 1 (Availability Zone A)
-                                                                    ├── EC2 Instance 2 (Availability Zone B)
-                                                                    └── EC2 Instance N (Auto-scaled based on demand)
+                                                   Internet Gateway
+                                                        ↓
+                                                 Application Load Balancer
+                                                        ↓
+                                                    Auto Scaling Group
+                                                                ├── EC2 Instance 1 (Availability Zone A)
+                                                                ├── EC2 Instance 2 (Availability Zone B)
+                                                                └── EC2 Instance N (Auto-scaled based on demand)
 
  Features
 - High Availability: Instances distributed across multiple Availability Zones
