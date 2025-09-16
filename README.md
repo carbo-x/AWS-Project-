@@ -63,15 +63,7 @@ Auto Scaling Group Settings
 Implementation Steps
 
  1. Launch Template Creation
-```bash
-# Create a launch template with user data script
-#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello from $(hostname -f)</h1>" > /var/www/html/index.html
-```
+user-data.sh
 
 2. Security Group Configuration
 - Web Server Security Group:
@@ -130,14 +122,6 @@ Cost Optimization
 - Set up billing alerts
 - Use Spot Instances for non-critical workloads (optional)
 
-Security Best Practices
-- ✅ Use least privilege IAM roles
-- ✅ Restrict SSH access to specific IP ranges
-- ✅ Keep AMIs and instances updated
-- ✅ Use private subnets for application servers (advanced setup)
-- ✅ Enable CloudTrail for audit logging
-- ✅ Use AWS Systems Manager for patch management
-
  Troubleshooting
 
 Common Issues
@@ -164,10 +148,3 @@ To avoid ongoing charges, clean up resources in this order:
 4. Terminate any remaining EC2 instances
 5. Delete Launch Template
 6. Delete Security Groups (if custom)
-
-Learning Outcomes
-- Understanding of AWS Auto Scaling concepts
-- Experience with Elastic Load Balancer configuration
-- Knowledge of CloudWatch monitoring and alerting
-- Best practices for scalable architecture design
-- Cost optimization strategies for AWS resources
